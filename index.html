@@ -40,7 +40,6 @@ margin-top:10px;
 }
 
 input,select{
-
 width:100%;
 padding:12px;
 margin-top:5px;
@@ -48,11 +47,9 @@ border-radius:8px;
 border:none;
 box-sizing:border-box;
 text-align:center;
-
 }
 
 button{
-
 width:100%;
 padding:14px;
 margin-top:20px;
@@ -62,7 +59,6 @@ color:white;
 font-size:16px;
 border-radius:8px;
 cursor:pointer;
-
 }
 
 button:hover{
@@ -80,74 +76,12 @@ font-weight:bold;
 text-decoration:none;
 }
 
-/* MENSAGENS */
-
-.mensagens{
-
-position:fixed;
-bottom:20px;
-left:20px;
-
-background:rgba(0,0,0,0.7);
-color:white;
-
-padding:15px 20px;
-border-radius:10px;
-
-font-size:14px;
-
-animation:fade 1s ease;
-
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-/* ANIMAÇÃO DO CARRO */
-
-.carro{
-
-position:fixed;
-bottom:80px;
-right:-120px;
-
-font-size:40px;
-
-animation:carroAndando 12s linear infinite;
-
-}
-
-@keyframes carroAndando{
-
-0%{
-right:-120px;
-}
-
-100%{
-right:110%;
-}
-
-}
-
 /* KM ANIMADO */
 
 .kmAnimado{
-
 font-size:22px;
 margin-top:10px;
 color:#22c55e;
-
 }
 
 footer{
@@ -216,14 +150,6 @@ Aluno de CCO 2023 - 2027
 
 </footer>
 
-</div>
-
-<div class="mensagens" id="mensagemBox">
-🚗 Dirija com segurança
-</div>
-
-<div class="carro">
-🚗💨
 </div>
 
 <script>
@@ -331,44 +257,7 @@ climaCidade(destino)
 
 }
 
-/* MENSAGENS */
-
-let mensagens=[
-
-"🚗 Dirija com segurança e respeitando as leis",
-"⚠️ Use sempre o cinto de segurança",
-"🛣️ Respeite os limites de velocidade",
-"📵 Não use celular ao volante, pode causar graves consequências",
-"🛑 Se beber não dirija, pode resultar em acidente",
-"🌄 Aproveite a viagem com responsabilidade e admire a paisagem",
-"🚦 Atenção aos sinais de trânsito ou levará multa",
-"⛽ Planeje sua viagem antes de sair, se não vai se perder"
-
-]
-
-let index=0
-
-setInterval(()=>{
-
-index++
-
-if(index>=mensagens.length){
-index=0
-}
-
-let box=document.getElementById("mensagemBox")
-
-box.style.animation="none"
-
-setTimeout(()=>{
-box.innerText=mensagens[index]
-box.style.animation="fade 1s ease"
-},100)
-
-},5000)
-
 </script>
 
 </body>
-
 </html>
